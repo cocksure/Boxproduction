@@ -51,6 +51,7 @@ class ProductionOrderCreate(generics.CreateAPIView):
 
 
 
+
 class IsDirectorOrReadOnly(BasePermission):
 	def has_permission(self, request, view):
 		if request.method in ['POST', 'PUT', 'PATCH', 'DELETE']:

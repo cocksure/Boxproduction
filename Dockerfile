@@ -14,8 +14,8 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
 
-EXPOSE 8000
+EXPOSE 8001
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
 #CMD ["gunicorn", "multisys.wsgi:application", "-b", "0.0.0.0:8030"]
 #CMD ["daphne", "multisys.asgi:application", "-b", "0.0.0.0", "-p", "8001"]

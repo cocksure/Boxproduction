@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="" />
+    <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BoxProduction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BoxProduction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/models/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/incoming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/models/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/outgoing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/models/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/stock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/views/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/incoming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/views/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/outgoing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/views/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/stock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2d4aUA5uTVg0spMoj115qifWm7l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -21,13 +62,51 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "settings.editor.splitter.proportion": "0.24442463",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BoxProduction" type="Python.DjangoServer" factoryName="Django server">
+      <module name="BoxProduction" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -43,8 +122,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709269817911</updated>
-      <workItem from="1709269822060" duration="3000" />
+      <workItem from="1709269822060" duration="24266000" />
+      <workItem from="1709350140858" duration="1681000" />
+      <workItem from="1709528565299" duration="521000" />
+      <workItem from="1709529777450" duration="6563000" />
+      <workItem from="1709540394788" duration="5836000" />
+      <workItem from="1709544609011" duration="13000" />
+      <workItem from="1709548570363" duration="7812000" />
+      <workItem from="1709616098578" duration="1129000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

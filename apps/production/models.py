@@ -74,3 +74,9 @@ class ProductionOrder(models.Model):
 	                              null=True)
 	shipping_date = models.DateField()
 	amount = models.DecimalField(max_digits=10, decimal_places=2)
+	status_choices = (
+		('in_progress', 'In Progress'),
+		('completed', 'Completed'),
+		('not_started', 'Not Started'),
+	)
+	status = models.CharField(max_length=20, choices=status_choices, default='not_started')

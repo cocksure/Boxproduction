@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BoxProduction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BoxProduction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/models/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/incoming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/models/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/outgoing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/models/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/stock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/views/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/incoming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/views/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/outgoing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/views/stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/stock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-    </list>
+    <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +101,7 @@
       <workItem from="1709540394788" duration="5836000" />
       <workItem from="1709544609011" duration="13000" />
       <workItem from="1709548570363" duration="7812000" />
-      <workItem from="1709616098578" duration="1129000" />
+      <workItem from="1709616098578" duration="1490000" />
     </task>
     <servers />
   </component>

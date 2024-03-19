@@ -6,8 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/migrations/0002_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/models/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/incoming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/views/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/incoming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/depo/views/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/outgoing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/migrations/0002_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0002_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0003_remove_productionorder_box_order_detail_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0004_remove_productionorder_box_order_detail_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/production/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0002_customuser_is_director.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "settings.editor.splitter.proportion": "0.24442463",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Python&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.24442463&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps" />
@@ -105,7 +121,11 @@
       <workItem from="1709540394788" duration="5836000" />
       <workItem from="1709544609011" duration="13000" />
       <workItem from="1709548570363" duration="7812000" />
-      <workItem from="1709616098578" duration="11654000" />
+      <workItem from="1709616098578" duration="18486000" />
+      <workItem from="1710218771286" duration="2647000" />
+      <workItem from="1710393957681" duration="15000" />
+      <workItem from="1710393980453" duration="5305000" />
+      <workItem from="1710839244372" duration="1030000" />
     </task>
     <servers />
   </component>

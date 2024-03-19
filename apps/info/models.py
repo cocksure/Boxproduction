@@ -7,6 +7,9 @@ from apps.users.models import CustomUser
 class MaterialType(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Material(BaseModel):
     code = models.CharField(max_length=100, unique=True)

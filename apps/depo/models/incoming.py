@@ -23,7 +23,7 @@ class Incoming(BaseModel):
     contract_number = models.CharField(max_length=150, null=True, blank=True)
     outgoing = models.ForeignKey(Outgoing, on_delete=models.PROTECT, null=True, blank=True)
     note = models.CharField(max_length=250, null=True, blank=True)
-    incoming_type = models.CharField(choices=INCOMING_TYPE, null=True, blank=True)
+    incoming_type = models.CharField(choices=INCOMING_TYPE, null=True, blank=True, max_length=150)
 
     class Meta:
         indexes = [

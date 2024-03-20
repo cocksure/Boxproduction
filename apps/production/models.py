@@ -25,8 +25,6 @@ class BoxModel(models.Model):
     name = models.CharField(max_length=100, unique=True)
     material = models.ForeignKey(Material, on_delete=models.CASCADE)
     type_of_work = models.ManyToManyField(Process, related_name='processes')
-    box_size = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True)
-    box_type = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True)
     photos = models.ForeignKey(
         UploadImage,
         on_delete=models.CASCADE,
@@ -34,6 +32,9 @@ class BoxModel(models.Model):
         blank=True,
         null=True
     )
+    box_size = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True, related_name='box_models_with_size')
+    box_type = models.ForeignKey(BoxType, on_delete=models.SET_NULL, blank=True, null=True, related_name='box_models_with_type')
+
 
 
 class BoxOrder(BaseModel):

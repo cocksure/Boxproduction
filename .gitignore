@@ -6,6 +6,6 @@ __pycache__/
 
 myenv/
 .env
-static
-media
+#static
+#media
 app

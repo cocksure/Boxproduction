@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fe141f2-5ea4-4892-80f5-ad498cbb7394" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/migrations/0002_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/models/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/models/incoming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/views/incoming.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/incoming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/depo/views/outgoing.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/depo/views/outgoing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/migrations/0002_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/info/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0002_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0003_remove_productionorder_box_order_detail_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/migrations/0004_remove_productionorder_box_order_detail_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/production/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/production/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0002_customuser_is_director.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +109,7 @@
       <workItem from="1710393957681" duration="15000" />
       <workItem from="1710393980453" duration="5305000" />
       <workItem from="1710839244372" duration="1030000" />
+      <workItem from="1710850062740" duration="1362000" />
     </task>
     <servers />
   </component>

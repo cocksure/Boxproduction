@@ -1,7 +1,7 @@
 from django.core.validators import FileExtensionValidator, MinValueValidator
 from django.db import models
 
-from apps.info.models import Material
+from apps.info.models import Material, BoxSize, BoxType
 from apps.shared.models import BaseModel
 from apps.users.models import CustomUser
 
@@ -14,7 +14,7 @@ class Process(models.Model):
 
 
 class UploadImage(models.Model):
-    photo = models.ImageField(
+	photo = models.ImageField(
         upload_to='box_photos/',
         default='no-image.png',
         validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'heic'])]
@@ -25,6 +25,8 @@ class BoxModel(models.Model):
     name = models.CharField(max_length=100, unique=True)
     material = models.ForeignKey(Material, on_delete=models.CASCADE)
     type_of_work = models.ManyToManyField(Process, related_name='processes')
+    box_size = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True)
+    box_type = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True)
     photos = models.ForeignKey(
         UploadImage,
         on_delete=models.CASCADE,
@@ -32,7 +34,6 @@ class BoxModel(models.Model):
         blank=True,
         null=True
     )
-
 
 
 class BoxOrder(BaseModel):

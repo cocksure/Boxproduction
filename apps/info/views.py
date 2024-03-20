@@ -21,7 +21,7 @@ class WarehouseViewSetView(viewsets.ModelViewSet):
 class MaterialViewSetView(viewsets.ModelViewSet):
     queryset = models.Material.objects.all()
     serializer_class = MaterialSerializer
-    filterset_fields = ['group', 'type']
+    filterset_fields = ['material_type']
     search_fields = ['code', 'name']
     pagination_class = CustomPagination
 

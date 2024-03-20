@@ -9,9 +9,9 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="MultiSystem",
+        title="Boxproduction",
         default_version='v1',
-        description='Universal Project',
+        description='Box Project',
         terms_of_service='demo.uz',
         contact=openapi.Contact(email='sanjarwer93@gmail.com'),
         license=openapi.License(name="demo license")

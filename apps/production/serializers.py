@@ -11,7 +11,7 @@ class ProcessSerializer(serializers.ModelSerializer):
 class BoxModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = BoxModel
-        fields = '__all__'
+        fields = ('name', 'material', 'type_of_work', 'photos')
 
 
 class BoxOrderDetailSerializer(serializers.ModelSerializer):
@@ -55,7 +55,3 @@ class ProductionOrderSerializer(serializers.ModelSerializer):
         box_model = obj.box_order_detail.box_model if obj.box_order_detail else None
         material_thickness = box_model.material.material_thickness if box_model and box_model.material else None
         return material_thickness
-
-
-
-

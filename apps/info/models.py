@@ -62,3 +62,17 @@ class Specification(BaseModel):
 
     def __str__(self):
         return self.name
+
+
+class BoxSize(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class BoxType(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

@@ -2,20 +2,20 @@ from django.contrib import admin
 from django.utils.safestring import mark_safe
 from .models import Process, BoxModel, BoxOrder, BoxOrderDetail, ProductionOrder, UploadImage
 
+
 @admin.register(UploadImage)
 class UploadImageAdmin(admin.ModelAdmin):
-    list_display = ['id', 'photo_preview']  # Добавляем photo_preview в list_display
-    search_fields = ['id']
-    list_per_page = 100
+	list_display = ['id', 'photo_preview']
+	search_fields = ['id']
+	list_per_page = 100
 
-    def photo_preview(self, obj):
-        if obj.photo:
-            return mark_safe(f'<img src="{obj.photo.url}" width="70" height="auto">')
-        else:
-            return 'No Image'
+	def photo_preview(self, obj):
+		if obj.photo:
+			return mark_safe(f'<img src="{obj.photo.url}" width="70" height="auto">')
+		else:
+			return 'No Image'
 
-    photo_preview.short_description = 'Photo Preview'
-
+	photo_preview.short_description = 'Photo Preview'
 
 
 @admin.register(Process)
@@ -51,5 +51,5 @@ class BoxOrderDetailAdmin(admin.ModelAdmin):
 class ProductionOrderAdmin(admin.ModelAdmin):
 	list_display = ['id', 'shipping_date', 'amount']
 
-	# def display_box_order_details(self, obj):
-	#         return ", ".join([str(box_order_detail) for box_order_detail in obj.box_order_detail.all()])
+# def display_box_order_details(self, obj):
+#         return ", ".join([str(box_order_detail) for box_order_detail in obj.box_order_detail.all()])

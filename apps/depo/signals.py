@@ -9,31 +9,31 @@ from .models.stock import Stock
 
 @receiver(post_save, sender=IncomingMaterial)
 def update_stock_on_incoming(sender, instance, created, **kwargs):
-    if created:
-        material = instance.material
-        warehouse = instance.incoming.warehouse
+	if created:
+		material = instance.material
+		warehouse = instance.incoming.warehouse
 
-        stock, _ = Stock.objects.get_or_create(material=material, warehouse=warehouse)
-        stock.save()
+		stock, _ = Stock.objects.get_or_create(material=material, warehouse=warehouse)
+		stock.save()
 
 
 @receiver(pre_save, sender=outgoing.Outgoing)
 def set_outgoing_status(sender, instance, **kwargs):
-    if not hasattr(instance, '_skip_signal'):
-        if instance.outgoing_type == 'перемешения':
-            instance.status = 'В ожидании'
-        else:
-            instance.status = 'Принят'
+	if not hasattr(instance, '_skip_signal'):
+		if instance.outgoing_type == 'перемешения':
+			instance.status = 'В ожидании'
+		else:
+			instance.status = 'Принят'
 
 
 # -----------------------------------INCOMING start--------------------------------------------------------------------
 
 @receiver(post_delete, sender=IncomingMaterial)
 def update_stock_after_IncomingMaterial_deletion(sender, instance, **kwargs):
-    material = instance.material
-    warehouse = instance.incoming.warehouse if hasattr(instance, 'incoming') else None
-    if warehouse:
-        Stock.objects.filter(material=material, warehouse=warehouse).update(amount=F('amount') - instance.amount)
+	material = instance.material
+	warehouse = instance.incoming.warehouse if hasattr(instance, 'incoming') else None
+	if warehouse:
+		Stock.objects.filter(material=material, warehouse=warehouse).update(amount=F('amount') - instance.amount)
 
 
 # -----------------------------------INCOMING finish--------------------------------------------------------------------
@@ -42,9 +42,9 @@ def update_stock_after_IncomingMaterial_deletion(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=OutgoingMaterial)
 def update_stock_after_OutgoingMaterial_deletion(sender, instance, **kwargs):
-    material = instance.material
-    warehouse = instance.outgoing.warehouse if hasattr(instance, 'outgoing') else None
-    if warehouse:
-        Stock.objects.filter(material=material, warehouse=warehouse).update(amount=F('amount') + instance.amount)
+	material = instance.material
+	warehouse = instance.outgoing.warehouse if hasattr(instance, 'outgoing') else None
+	if warehouse:
+		Stock.objects.filter(material=material, warehouse=warehouse).update(amount=F('amount') + instance.amount)
 
 # -----------------------------------OUTGOING finish--------------------------------------------------------------------

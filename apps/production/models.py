@@ -7,7 +7,7 @@ from apps.users.models import CustomUser
 
 
 class Process(models.Model):
-	name = models.CharField(max_length=100)
+	name = models.CharField(max_length=100, unique=True)
 
 	def __str__(self):
 		return self.name
@@ -15,26 +15,27 @@ class Process(models.Model):
 
 class UploadImage(models.Model):
 	photo = models.ImageField(
-        upload_to='box_photos/',
-        default='no-image.png',
-        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'heic'])]
-    )
+		upload_to='box_photos/',
+		default='no-image.png',
+		validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png', 'heic'])]
+	)
 
 
 class BoxModel(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    material = models.ForeignKey(Material, on_delete=models.CASCADE)
-    type_of_work = models.ManyToManyField(Process, related_name='processes')
-    photos = models.ForeignKey(
-        UploadImage,
-        on_delete=models.CASCADE,
-        related_name='box_model',
-        blank=True,
-        null=True
-    )
-    box_size = models.ForeignKey(BoxSize, on_delete=models.SET_NULL, blank=True, null=True, related_name='box_models_with_size')
-    box_type = models.ForeignKey(BoxType, on_delete=models.SET_NULL, blank=True, null=True, related_name='box_models_with_type')
-
+	name = models.CharField(max_length=100, unique=True)
+	material = models.ForeignKey(Material, on_delete=models.CASCADE)
+	type_of_work = models.ManyToManyField(Process, related_name='processes')
+	photos = models.ForeignKey(
+		UploadImage,
+		on_delete=models.CASCADE,
+		related_name='box_model',
+		blank=True,
+		null=True
+	)
+	box_size = models.ForeignKey(BoxSize, on_delete=models.SET_NULL,
+								 blank=True, null=True, related_name='box_models_with_size')
+	box_type = models.ForeignKey(BoxType, on_delete=models.SET_NULL,
+								 blank=True, null=True, related_name='box_models_with_type')
 
 
 class BoxOrder(BaseModel):

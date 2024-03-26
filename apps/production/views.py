@@ -1,16 +1,25 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import generics
-from .models import BoxModel, BoxOrder, ProductionOrder, Process, BoxOrderDetail
-from .serializers import BoxModelSerializer, BoxOrderSerializer, ProcessSerializer, ProductionOrderSerializer
+
+from .models import BoxModel, BoxOrder, ProductionOrder, Process, BoxOrderDetail, UploadImage
+from .serializers import BoxModelSerializer, BoxOrderSerializer, ProcessSerializer, ProductionOrderSerializer, \
+	UploadImageSerializer
 from rest_framework.permissions import BasePermission
 from rest_framework.response import Response
-from datetime import date, datetime
+from datetime import datetime
 from rest_framework import status
+
+
+class UploadImageView(generics.CreateAPIView):
+	queryset = UploadImage.objects.all()
+	serializer_class = UploadImageSerializer
 
 
 class BoxModelListCreate(generics.ListCreateAPIView):
 	queryset = BoxModel.objects.all()
 	serializer_class = BoxModelSerializer
+	filterset_fields = ['box_type']
+	search_fields = ['material__name']
 
 
 class BoxModelDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -34,22 +43,20 @@ class BoxOrderListCreate(generics.ListCreateAPIView):
 
 
 class ProductionOrderCreate(generics.CreateAPIView):
-    serializer_class = ProductionOrderSerializer
+	serializer_class = ProductionOrderSerializer
 
-    def create(self, request, *args, **kwargs):
-        box_order_detail_id = self.kwargs.get('pk')
-        box_order_detail = get_object_or_404(BoxOrderDetail, pk=box_order_detail_id)
+	def create(self, request, *args, **kwargs):
+		box_order_detail_id = self.kwargs.get('pk')
+		box_order_detail = get_object_or_404(BoxOrderDetail, pk=box_order_detail_id)
 
-        production_order = ProductionOrder.objects.create(
-            box_order_detail=box_order_detail,
-            shipping_date=datetime.now().date(),
-            amount=box_order_detail.amount
-        )
+		production_order = ProductionOrder.objects.create(
+			box_order_detail=box_order_detail,
+			shipping_date=datetime.now().date(),
+			amount=box_order_detail.amount
+		)
 
-        serializer = ProductionOrderSerializer(production_order)
-        return Response(serializer.data, status=201)
-
-
+		serializer = ProductionOrderSerializer(production_order)
+		return Response(serializer.data, status=201)
 
 
 class IsDirectorOrReadOnly(BasePermission):
@@ -78,7 +85,7 @@ class BoxOrderDetailView(generics.RetrieveUpdateDestroyAPIView):
 				return Response(serializer.data)
 			else:
 				return Response({"detail": "Order has already been confirmed or rejected."},
-				                status=status.HTTP_400_BAD_REQUEST)
+								status=status.HTTP_400_BAD_REQUEST)
 		return Response(serializer.data)
 
 

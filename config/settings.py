@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'corsheaders',
     'dj_rest_auth.registration',
+    'bootstrap5',
 
     #local apps
     'apps.users',

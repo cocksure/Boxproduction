@@ -19,16 +19,21 @@ class BoxModelSerializer(serializers.ModelSerializer):
 	type_of_work_names = serializers.SerializerMethodField()
 	box_size_name = serializers.CharField(source='box_size.name', read_only=True)
 	box_type_name = serializers.CharField(source='box_type.name', read_only=True)
-	photos = UploadImageSerializer()
+	image_url = serializers.SerializerMethodField()
 
 	class Meta:
 		model = BoxModel
 		fields = (
-			'name', 'material', 'material_name', 'type_of_work', 'type_of_work_names', 'box_size', 'box_size_name',
-			'box_type', 'box_type_name', 'photos')
+			'id', 'name', 'material', 'material_name', 'type_of_work', 'type_of_work_names', 'box_size', 'box_size_name',
+			'box_type', 'box_type_name', 'photos', 'image_url')
 
 	def get_type_of_work_names(self, obj):
 		return [process.name for process in obj.type_of_work.all()] if obj.type_of_work.exists() else []
+
+	def get_image_url(self, obj):
+		if obj.photos and obj.photos.photo:
+			return obj.photos.photo.url
+		return None
 
 
 class BoxOrderDetailSerializer(serializers.ModelSerializer):

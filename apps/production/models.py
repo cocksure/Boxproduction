@@ -24,7 +24,7 @@ class UploadImage(models.Model):
 class BoxModel(models.Model):
 	name = models.CharField(max_length=100, unique=True)
 	material = models.ForeignKey(Material, on_delete=models.CASCADE)
-	type_of_work = models.ManyToManyField(Process, related_name='processes')
+	type_of_work = models.ManyToManyField(Process, related_name='processes', blank=True)
 	photos = models.ForeignKey(
 		UploadImage,
 		on_delete=models.CASCADE,

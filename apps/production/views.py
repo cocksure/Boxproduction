@@ -10,7 +10,7 @@ from datetime import datetime
 from rest_framework import status
 
 
-class UploadImageView(generics.CreateAPIView):
+class UploadImageView(generics.ListCreateAPIView):
 	queryset = UploadImage.objects.all()
 	serializer_class = UploadImageSerializer
 
@@ -19,7 +19,7 @@ class BoxModelListCreate(generics.ListCreateAPIView):
 	queryset = BoxModel.objects.all()
 	serializer_class = BoxModelSerializer
 	filterset_fields = ['box_type']
-	search_fields = ['material__name']
+	search_fields = ['material__name', 'name']
 
 
 class BoxModelDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -30,6 +30,8 @@ class BoxModelDetail(generics.RetrieveUpdateDestroyAPIView):
 class BoxOrderListCreate(generics.ListCreateAPIView):
 	queryset = BoxOrder.objects.all()
 	serializer_class = BoxOrderSerializer
+	filterset_fields = ['status', ]
+	search_fields = ['specification', 'id']
 
 	def create(self, request, *args, **kwargs):
 		request.data['created_by'] = request.user.id

@@ -21,7 +21,7 @@ from apps.depo.serializers import StockSerializer, OutgoingMaterialSerializer, O
 class StockListView(BaseListView):
 	queryset = Stock.objects.all()
 	serializer_class = StockSerializer
-	filterset_fields = ['material_type__name', 'warehouse']
+	filterset_fields = ['warehouse']
 	search_fields = ['material__name', ]
 	pagination_class = CustomPagination
 

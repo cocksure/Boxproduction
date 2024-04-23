@@ -224,15 +224,7 @@ class Migration(migrations.Migration):
                         verbose_name="Детали заказа коробки",
                     ),
                 ),
-                (
-                    "type_of_work",
-                    models.ManyToManyField(
-                        blank=True,
-                        related_name="processes",
-                        to="production.process",
-                        verbose_name="Тип работы",
-                    ),
-                ),
+
             ],
             options={
                 "verbose_name": "Производственный заказ",

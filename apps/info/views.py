@@ -19,8 +19,7 @@ class MaterialListView(BaseListView):
 	queryset = models.Material.objects.all()
 	serializer_class = serializers.MaterialSerializer
 	filterset_fields = ['material_group', 'special_group', 'material_type']
-	search_fields = ['code', 'name', 'material_group__name', 'special_group__name', 'brand__name',
-					 'material_type__name']
+	search_fields = ['code', 'name']
 
 
 class MaterialTypeListView(ListAPIView):

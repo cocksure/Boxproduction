@@ -62,7 +62,7 @@ class MaterialSerializer(serializers.ModelSerializer):
 class BoxSizeSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = models.BoxSize
-		fields = ('name',)
+		fields = '__all__'
 
 
 class FirmSerializer(serializers.ModelSerializer):

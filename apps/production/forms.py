@@ -5,4 +5,4 @@ from apps.production import models
 class BoxModelForm(ModelForm):
     class Meta:
         model = models.BoxModel
-        fields = ["name", "material", "type_of_work", "photos", "box_size", "box_type"]
+        fields = ["name", "material", "photos", "box_size", "box_type"]

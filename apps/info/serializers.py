@@ -20,11 +20,10 @@ class WarehouseSerializer(BaseNameCodeSerializer):
 		return data
 
 
-class MaterialSerializer(BaseNameCodeSerializer):
+class BrandSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = models.Material
-		fields = ('id', 'code', 'name', 'material_type', 'material_thickness',
-				  'created_time', 'updated_time', 'created_by', 'updated_by')
+		model = models.Brand
+		fields = '__all__'
 
 
 class MaterialTypeSerializer(BaseNameCodeSerializer):
@@ -33,13 +32,52 @@ class MaterialTypeSerializer(BaseNameCodeSerializer):
 		fields = ('id', 'name')
 
 
-class BoxTypeSerializer(serializers.ModelSerializer):
+class MaterialGroupSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = models.BoxType
-		fields = ('name',)
+		model = models.MaterialGroup
+		fields = '__all__'
+
+
+class MaterialSpecialGroupSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.MaterialSpecialGroup
+		fields = '__all__'
+
+
+class MaterialSerializer(serializers.ModelSerializer):
+	material_group = MaterialGroupSerializer()
+	special_group = MaterialSpecialGroupSerializer()
+	brand = BrandSerializer()
+	material_type = MaterialTypeSerializer()
+
+	class Meta:
+		model = models.Material
+		fields = (
+			'id', 'code', 'name', 'material_group', 'special_group', 'brand',
+			'material_type', 'material_thickness', 'unit_of_measurement',
+			'created_time', 'updated_time', 'created_by', 'updated_by'
+		)
 
 
 class BoxSizeSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = models.BoxSize
 		fields = ('name',)
+
+
+class FirmSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.Firm
+		fields = '__all__'
+
+
+class SpecificationSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.Specification
+		fields = '__all__'
+
+
+class BoxTypeSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.BoxType
+		fields = '__all__'

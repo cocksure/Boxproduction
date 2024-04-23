@@ -10,14 +10,14 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ("production", "0001_initial"),
-        ("info", "0002_initial"),
+        ("depo", "0002_initial"),
+        ("info", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AddField(
-            model_name="boxorder",
+            model_name="outgoing",
             name="created_by",
             field=models.ForeignKey(
                 null=True,
@@ -27,18 +27,18 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.AddField(
-            model_name="boxorder",
-            name="manager",
+            model_name="outgoing",
+            name="to_warehouse",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                to=settings.AUTH_USER_MODEL,
-                verbose_name="Менеджер",
+                related_name="outgoing_to_warehouse",
+                to="info.warehouse",
             ),
         ),
         migrations.AddField(
-            model_name="boxorder",
+            model_name="outgoing",
             name="updated_by",
             field=models.ForeignKey(
                 blank=True,
@@ -49,61 +49,61 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.AddField(
-            model_name="boxmodel",
-            name="box_size",
+            model_name="outgoing",
+            name="warehouse",
             field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="box_models_with_size",
-                to="info.boxsize",
-                verbose_name="Размер коробки",
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="outgoing_warehouse",
+                to="info.warehouse",
             ),
         ),
         migrations.AddField(
-            model_name="boxmodel",
-            name="box_type",
+            model_name="incomingmaterial",
+            name="incoming",
             field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="box_models_with_type",
-                to="info.boxtype",
-                verbose_name="Тип коробки",
+                on_delete=django.db.models.deletion.CASCADE, to="depo.incoming"
             ),
         ),
         migrations.AddField(
-            model_name="boxmodel",
-            name="created_by",
-            field=models.ForeignKey(
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="%(class)s_created_by",
-                to=settings.AUTH_USER_MODEL,
-            ),
-        ),
-        migrations.AddField(
-            model_name="boxmodel",
+            model_name="incomingmaterial",
             name="material",
             field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE,
-                to="info.material",
-                verbose_name="Материал",
+                on_delete=django.db.models.deletion.CASCADE, to="info.material"
             ),
         ),
         migrations.AddField(
-            model_name="boxmodel",
-            name="photos",
+            model_name="incoming",
+            name="created_by",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="%(class)s_created_by",
+                to=settings.AUTH_USER_MODEL,
+            ),
+        ),
+        migrations.AddField(
+            model_name="incoming",
+            name="from_warehouse",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name="box_model",
-                to="production.uploadimage",
+                related_name="incoming_from_warehouse",
+                to="info.warehouse",
             ),
         ),
         migrations.AddField(
-            model_name="boxmodel",
+            model_name="incoming",
+            name="outgoing",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="depo.outgoing",
+            ),
+        ),
+        migrations.AddField(
+            model_name="incoming",
             name="updated_by",
             field=models.ForeignKey(
                 blank=True,
@@ -111,6 +111,32 @@ class Migration(migrations.Migration):
                 on_delete=django.db.models.deletion.SET_NULL,
                 related_name="%(class)s_updated_by",
                 to=settings.AUTH_USER_MODEL,
+            ),
+        ),
+        migrations.AddField(
+            model_name="incoming",
+            name="warehouse",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="incoming_warehouse",
+                to="info.warehouse",
+            ),
+        ),
+        migrations.AddIndex(
+            model_name="stock",
+            index=models.Index(
+                fields=["material"], name="depo_stock_materia_8a9e23_idx"
+            ),
+        ),
+        migrations.AddIndex(
+            model_name="outgoing",
+            index=models.Index(fields=["code"], name="depo_outgoi_code_98c757_idx"),
+        ),
+        migrations.AddIndex(
+            model_name="incoming",
+            index=models.Index(
+                fields=["warehouse", "from_warehouse"],
+                name="depo_incomi_warehou_6fe2e3_idx",
             ),
         ),
     ]

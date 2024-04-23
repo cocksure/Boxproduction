@@ -10,7 +10,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, './.env'))
 SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['boxproduction.vercel.app', 'boxproduction.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
 	'django.contrib.sites',
@@ -21,20 +21,6 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 
-<<<<<<< HEAD
-	# packages
-	'import_export',
-	'rest_framework',
-	'django_filters',
-	'rest_framework.authtoken',
-	'allauth',
-	'allauth.account',
-	'drf_yasg',
-	'dj_rest_auth',
-	'allauth.socialaccount',
-	'corsheaders',
-	'dj_rest_auth.registration',
-=======
     #packages
     'import_export',
     'rest_framework',
@@ -48,7 +34,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'dj_rest_auth.registration',
     'bootstrap5',
->>>>>>> 7ab669962c887d2ee98232fd976b54fbdccc4607
 
 	# local apps
 	'apps.users',

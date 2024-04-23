@@ -26,7 +26,6 @@ class ProcessAdmin(admin.ModelAdmin):
 @admin.register(BoxModel)
 class BoxModelAdmin(admin.ModelAdmin):
 	list_display = ('name', 'material', 'box_size', 'box_type')
-	filter_horizontal = ('type_of_work',)
 
 
 @admin.register(BoxOrder)

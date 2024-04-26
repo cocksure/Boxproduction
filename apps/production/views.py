@@ -45,6 +45,8 @@ class BoxOrderListCreate(generics.ListCreateAPIView):
 
 
 class ProductionOrderCreate(generics.CreateAPIView):
+	queryset = ProductionOrder.objects.all()  # Указываем queryset
+
 	serializer_class = ProductionOrderSerializer
 
 	def create(self, request, *args, **kwargs):

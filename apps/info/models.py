@@ -29,7 +29,7 @@ class Material(BaseModel):
 		('litr', 'л'),
 	)
 
-	code = models.CharField(max_length=100, unique=True, verbose_name="Код")
+	code = models.CharField(max_length=100, unique=True, verbose_name="Код", null=True, blank=True)
 	name = models.CharField(max_length=100, unique=True, verbose_name="Название")
 	material_group = models.ForeignKey('MaterialGroup', on_delete=models.CASCADE, verbose_name="Группа материала")
 	special_group = models.ForeignKey('MaterialSpecialGroup', on_delete=models.CASCADE,
@@ -37,7 +37,7 @@ class Material(BaseModel):
 	brand = models.ForeignKey('Brand', on_delete=models.CASCADE, verbose_name="Бренд")
 	material_type = models.ForeignKey(MaterialType, on_delete=models.CASCADE, max_length=100,
 									  verbose_name="Тип материала")
-	material_thickness = models.FloatField(verbose_name="Толщина материала")
+	material_thickness = models.FloatField(verbose_name="Толщина материала", null=True, blank=True)
 	unit_of_measurement = models.CharField(max_length=10, choices=UNIT_CHOICES, default=None,
 										   verbose_name="Единица измерения")
 

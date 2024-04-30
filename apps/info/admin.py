@@ -16,13 +16,13 @@ class MaterialTypeAdmin(admin.ModelAdmin):
 
 @admin.register(models.Material)
 class MaterialAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-	list_display = ('name', 'code', 'material_type', 'material_thickness',)
+	list_display = ('name', 'code', 'material_type',)
 	search_fields = ('code', 'name',)
 	list_filter = ('material_type',)
 	list_per_page = 100
 	date_hierarchy = 'created_time'
 	readonly_fields = ('created_time', 'updated_time')
-	fields = ('code', 'name', 'material_group', 'special_group', 'brand', 'material_type', 'material_thickness',
+	fields = ('code', 'name', 'material_group', 'special_group', 'brand', 'material_type',
 			  'unit_of_measurement')
 	list_per_page = 100
 

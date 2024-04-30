@@ -51,14 +51,17 @@ class MaterialSerializer(serializers.ModelSerializer):
 	type_name = serializers.SerializerMethodField()
 	spec_group_id = serializers.SerializerMethodField()
 	spec_name = serializers.SerializerMethodField()
+	brand_id = serializers.SerializerMethodField()
+	brand_name = serializers.SerializerMethodField()
 
 	class Meta:
 		model = models.Material
 		fields = (
-			'id', 'code', 'name', 'group_id', 'group_name',
+			'id', 'code', 'name', 'material_group', 'group_id', 'group_name',
 			'type_id', 'type_name', 'material_type', 'material_thickness',
 			'unit_of_measurement', 'created_time', 'updated_time',
-			'created_by', 'updated_by', 'spec_group_id', 'spec_name'
+			'created_by', 'updated_by', 'special_group', 'spec_group_id', 'spec_name',
+			'brand', 'brand_id', 'brand_name'
 		)
 
 	def get_group_id(self, obj):
@@ -78,6 +81,12 @@ class MaterialSerializer(serializers.ModelSerializer):
 
 	def get_spec_name(self, obj):
 		return obj.special_group.name if obj.special_group else None
+
+	def get_brand_id(self, obj):
+		return obj.brand.id if obj.brand else None
+
+	def get_brand_name(self, obj):
+		return obj.brand.name if obj.brand else None
 
 
 class BoxSizeSerializer(serializers.ModelSerializer):

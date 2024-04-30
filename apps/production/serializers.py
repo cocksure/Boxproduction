@@ -62,7 +62,7 @@ class ProductionOrderSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = ProductionOrder
-		fields = ['box_order_detail', 'shipping_date', 'amount', 'type_of_work', ]
+		fields = ['box_order_detail', 'shipping_date', 'amount', 'material_thickness', 'type_of_work', ]
 
 	def get_type_of_work(self, obj):
 		box_model = obj.box_order_detail.box_model if obj.box_order_detail else None

@@ -62,14 +62,10 @@ class ProductionOrderSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = ProductionOrder
-		fields = ['box_order_detail', 'shipping_date', 'amount', 'material_thickness', 'type_of_work', ]
+		fields = ['box_order_detail', 'shipping_date', 'amount', 'type_of_work', ]
 
 	def get_type_of_work(self, obj):
 		box_model = obj.box_order_detail.box_model if obj.box_order_detail else None
 		type_of_work = box_model.type_of_work.all() if box_model else []
 		return [process.name for process in type_of_work]
 
-	def get_material_thickness(self, obj):
-		box_model = obj.box_order_detail.box_model if obj.box_order_detail else None
-		material_thickness = box_model.material.material_thickness if box_model and box_model.material else None
-		return material_thickness

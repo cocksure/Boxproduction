@@ -58,7 +58,7 @@ class MaterialSerializer(serializers.ModelSerializer):
 		model = models.Material
 		fields = (
 			'id', 'code', 'name', 'material_group', 'group_id', 'group_name',
-			'type_id', 'type_name', 'material_type', 'material_thickness',
+			'type_id', 'type_name', 'material_type',
 			'unit_of_measurement', 'created_time', 'updated_time',
 			'created_by', 'updated_by', 'special_group', 'spec_group_id', 'spec_name',
 			'brand', 'brand_id', 'brand_name'

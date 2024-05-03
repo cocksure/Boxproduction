@@ -4,9 +4,18 @@ from apps.shared.serializers import BaseNameCodeSerializer
 
 
 class WarehouseSerializer(BaseNameCodeSerializer):
+	manager_name = serializers.SerializerMethodField()
+
 	class Meta:
 		model = models.Warehouse
-		fields = '__all__'
+		fields = (
+			'id', 'code', 'name', 'location', 'can_import', 'can_export', 'use_negative', 'is_active', 'managers',
+			 'manager_name'
+		)
+
+	def get_manager_name(self, obj):
+		managers = obj.managers.all()
+		return [manager.username for manager in managers] if managers else None
 
 	def validate(self, data):
 		if not data.get('is_active'):

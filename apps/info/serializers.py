@@ -16,17 +16,6 @@ class WarehouseSerializer(BaseNameCodeSerializer):
 		managers = obj.managers.all()
 		return [{'id': manager.id, 'manager_name': manager.username} for manager in managers] if managers else None
 
-	def validate(self, data):
-		if not data.get('is_active'):
-			raise serializers.ValidationError("Склад неактивен.")
-		if not data.get('can_import'):
-			raise serializers.ValidationError("Склад не может импортировать!")
-		if not data.get('can_export'):
-			raise serializers.ValidationError("Warehouse cannot export products.")
-		if data.get('use_negative') and data.get('available_quantity') < 0:
-			raise serializers.ValidationError("На складе отрицательный запас.")
-		return data
-
 
 class BrandSerializer(serializers.ModelSerializer):
 	class Meta:

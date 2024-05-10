@@ -61,7 +61,7 @@ class SpecificationAdmin(admin.ModelAdmin):
 
 @admin.register(models.Firm)
 class FirmAdmin(admin.ModelAdmin):
-	list_display = ('name', 'phone_number', 'code', 'created_by', 'created_time')
+	list_display = ('name', 'phone_number', 'code', 'type_firm', 'is_active', 'created_by', 'created_time')
 	search_fields = ('code', 'name')
 	list_filter = ()
 	list_per_page = 100
@@ -71,8 +71,8 @@ class FirmAdmin(admin.ModelAdmin):
 	fieldsets = (
 		('Basic Information', {
 			'fields': (
-				'code', 'name', 'legal_address', 'actual_address', 'phone_number',
-				'license_number',
+				'code', 'name', 'type_firm', 'legal_address', 'actual_address', 'phone_number',
+				'license_number', 'mfo', 'is_active',
 			)
 		}),
 		('Timestamps', {

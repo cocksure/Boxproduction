@@ -119,7 +119,7 @@ class Specification(BaseModel):
 
 
 class BoxSize(models.Model):
-	name = models.CharField(max_length=100, verbose_name="Название")
+	name = models.CharField(max_length=100, null=True, blank=True, verbose_name="Название")
 
 	width = models.PositiveIntegerField(verbose_name="Ширина")
 	height = models.PositiveIntegerField(verbose_name="Высота")

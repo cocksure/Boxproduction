@@ -12,6 +12,8 @@ class WarehouseSerializer(BaseNameCodeSerializer):
 			'id', 'code', 'name', 'location', 'can_import', 'can_export', 'use_negative', 'is_active', 'managers'
 		)
 
+		read_only_fields = ['code']
+
 	def get_managers(self, obj):
 		managers = obj.managers.all()
 		return [{'id': manager.id, 'manager_name': manager.username} for manager in managers] if managers else None
@@ -60,6 +62,7 @@ class MaterialSerializer(serializers.ModelSerializer):
 			'created_by', 'updated_by', 'special_group', 'spec_group_id', 'spec_name',
 			'brand', 'brand_id', 'brand_name'
 		)
+		read_only_fields = ['code']
 
 	def get_group_id(self, obj):
 		return obj.material_group.id if obj.material_group else None
@@ -96,6 +99,7 @@ class FirmSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = models.Firm
 		fields = '__all__'
+		read_only_fields = ['code']
 
 
 class SpecificationSerializer(serializers.ModelSerializer):

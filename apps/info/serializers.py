@@ -107,7 +107,7 @@ class SpecificationSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = models.Specification
-		fields = ('year', 'name', 'firm_name', 'firm', 'created_time', 'created_by', 'updated_time', 'updated_by')
+		fields = ('id', 'year', 'name', 'firm_name', 'firm', 'created_time', 'created_by', 'updated_time', 'updated_by')
 
 	def get_firm_name(self, obj):
 		return obj.firm.name if obj.firm else None

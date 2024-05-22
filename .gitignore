@@ -9,3 +9,4 @@ myenv/
 #static
 #media
 app
+db.sqlite3
